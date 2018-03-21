@@ -2,6 +2,8 @@ namespace TowerDefense
 {
     class Tower
     {
+        private const int _range = 1;
+        private const int power = 1;
         //add on path validation
         private readonly MapLocation _location;
 
@@ -14,7 +16,11 @@ namespace TowerDefense
         {
             foreach (Invader invader in invaders)
             {
-                
+                if(invader.IsActive && _location.InRangeOf(invader.Location, power))
+                {
+                    invader.DecreaseHealth(_range);
+                    break;
+                }
             }
         }
     }
