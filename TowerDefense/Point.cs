@@ -4,7 +4,6 @@ namespace TowerDefense
 {
     class Point
     {
-
         public readonly int X;
         public readonly int Y;
 
