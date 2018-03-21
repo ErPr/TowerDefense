@@ -2,19 +2,19 @@ namespace TowerDefense
 {
     class Tower
     {
+        //add on path validation
         private readonly MapLocation _location;
-        
+
         public Tower(MapLocation location)
         {
             _location = location;
         }
-        
+
         public void FireOnInvaders(Invader[] invaders)
         {
-            for(int i = 0; i < invaders.Length; i++)
+            foreach (Invader invader in invaders)
             {
-                Invader invader = invaders[i];
-                // Do stuff with invader
+                
             }
         }
     }
