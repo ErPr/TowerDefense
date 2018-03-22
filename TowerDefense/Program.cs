@@ -4,6 +4,7 @@ namespace TowerDefense
 {
     class Program
     {
+        //TODO - update to use I/O
         public static void Main()
         {
             Map map = new Map(8, 5);
@@ -27,7 +28,7 @@ namespace TowerDefense
                 {
                     new Invader(path),
                     new Invader(path),
-                    new Invader(path),
+                    new ShieldedInvader(path),
                     new Invader(path),
                 };
 
