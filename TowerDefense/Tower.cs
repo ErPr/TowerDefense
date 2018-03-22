@@ -2,9 +2,14 @@ namespace TowerDefense
 {
     class Tower
     {
-        private const int _range = 1;
-        private const int _power = 1;
-        private const double _accuracy = .75;
+        //changing these members to protected properties - keeping for reference
+        //private const int _range = 1;
+        //private const int _power = 1;
+        //private const double _accuracy = .75;
+
+        protected virtual int Range { get; } = 1;
+        protected virtual int Power { get  } = 1;
+        protected virtual double Accuracy { get } = .75;
 
         //add on path validation
 
@@ -23,18 +28,18 @@ namespace TowerDefense
         {
             // Tower._random   is only necessary when accessing a static memeber from outside the class
             //return Tower._random.NextDouble() < _accuracy;
-            return _random.NextDouble() < _accuracy;
+            return _random.NextDouble() < Accuracy;
         }
 
         public void FireOnInvaders(Invader[] invaders)
         {
             foreach (Invader invader in invaders)
             {
-                if(invader.IsActive && _location.InRangeOf(invader.Location, _range))
+                if(invader.IsActive && _location.InRangeOf(invader.Location, Range))
                 {
                     if(IsSucessfulShot())
                     {
-                        invader.DecreaseHealth(_power);
+                        invader.DecreaseHealth(Power);
 
                         if(invader.IsNeutralized)
                         {
