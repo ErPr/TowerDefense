@@ -8,8 +8,8 @@ namespace TowerDefense
         //private const double _accuracy = .75;
 
         protected virtual int Range { get; } = 1;
-        protected virtual int Power { get  } = 1;
-        protected virtual double Accuracy { get } = .75;
+        protected virtual int Power { get; } = 1;
+        protected virtual double Accuracy { get; } = .75;
 
         //add on path validation
 
@@ -17,7 +17,7 @@ namespace TowerDefense
         private static readonly System.Random _random = new System.Random();
 
 
-        private readonly MapLocation _location;
+        protected readonly MapLocation _location;
 
         public Tower(MapLocation location)
         {
