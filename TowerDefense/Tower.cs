@@ -30,12 +30,11 @@ namespace TowerDefense
         {
             foreach (Invader invader in invaders)
             {
-                if(invader.IsActive && _location.InRangeOf(invader.Location, _power))
+                if(invader.IsActive && _location.InRangeOf(invader.Location, _range))
                 {
                     if(IsSucessfulShot())
                     {
-                        invader.DecreaseHealth(_range);
-                        System.Console.WriteLine("Shot at and hit invader!");
+                        invader.DecreaseHealth(_power);
 
                         if(invader.IsNeutralized)
                         {
