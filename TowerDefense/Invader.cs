@@ -5,6 +5,8 @@ namespace TowerDefense
         private readonly Path _path;
         private int _pathStep = 0;
 
+        protected virtual int StepSize { get; } = 1;
+
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
         public int Health { get; private set; } = 2;
@@ -21,7 +23,7 @@ namespace TowerDefense
             _path = path;
         }
 
-        public void Move() => _pathStep += 1;
+        public void Move() => _pathStep += StepSize;
 
         public virtual void DecreaseHealth(int factor)
         {
