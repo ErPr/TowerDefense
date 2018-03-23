@@ -9,7 +9,7 @@ namespace TowerDefense
 
         public MapLocation Location => _path.GetLocationAt(_pathStep);
 
-        public virtual int Health { get; protected set; } = 2;
+        public abstract int Health { get; protected set; }
 
         public bool HasScored => (_pathStep >= _path.Length) ? true : false;
 
