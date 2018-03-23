@@ -42,14 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game\Exceptions.cs" />
+    <Compile Include="Definitions\Exceptions.cs" />
     <Compile Include="Entities\FastInvader.cs" />
     <Compile Include="Entities\Invader.cs" />
-    <Compile Include="Game\Level.cs" />
-    <Compile Include="Game\Map.cs" />
-    <Compile Include="Game\MapLocation.cs" />
-    <Compile Include="Game\Path.cs" />
-    <Compile Include="Game\Point.cs" />
+    <Compile Include="Definitions\Level.cs" />
+    <Compile Include="Definitions\Map.cs" />
+    <Compile Include="Definitions\MapLocation.cs" />
+    <Compile Include="Definitions\Path.cs" />
+    <Compile Include="Definitions\Point.cs" />
     <Compile Include="Entities\PowerfulTower.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
