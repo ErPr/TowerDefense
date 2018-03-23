@@ -43,20 +43,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Definitions\Exceptions.cs" />
-    <Compile Include="Entities\FastInvader.cs" />
-    <Compile Include="Entities\Invader.cs" />
+    <Compile Include="Entities\Invaders\BasicInvader.cs" />
+    <Compile Include="Entities\Invaders\FastInvader.cs" />
+    <Compile Include="Entities\Invaders\Invader.cs" />
     <Compile Include="Definitions\Level.cs" />
     <Compile Include="Definitions\Map.cs" />
     <Compile Include="Definitions\MapLocation.cs" />
     <Compile Include="Definitions\Path.cs" />
     <Compile Include="Definitions\Point.cs" />
-    <Compile Include="Entities\PowerfulTower.cs" />
+    <Compile Include="Entities\Towers\PowerfulTower.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Entities\ShieldedInvader.cs" />
-    <Compile Include="Entities\SniperTower.cs" />
-    <Compile Include="Entities\StrongInvader.cs" />
-    <Compile Include="Entities\Tower.cs" />
+    <Compile Include="Entities\Invaders\ShieldedInvader.cs" />
+    <Compile Include="Entities\Towers\SniperTower.cs" />
+    <Compile Include="Entities\Invaders\StrongInvader.cs" />
+    <Compile Include="Entities\Towers\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
