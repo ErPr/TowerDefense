@@ -30,6 +30,12 @@ namespace TowerDefense
             return this.X == that.X && this.Y == that.Y;
         }
 
+        //is this not self-referencing?
+        public override int GetHashCode()
+        {
+            return X.GetHashCode() * 31 + Y.GetHashCode();
+        }
+
         public int DistanceTo(int x, int y)
         {
             int xDiff = X - x;
