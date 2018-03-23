@@ -13,9 +13,10 @@ namespace TowerDefense
 
         //add on path validation
 
+        // Deleted in favor of creating static Random class
+        // keeping for reference
         //static - initialized once used by all towers
-        private static readonly System.Random _random = new System.Random();
-
+        // private static readonly System.Random _random = new System.Random();
 
         protected readonly MapLocation _location;
 
@@ -28,7 +29,7 @@ namespace TowerDefense
         {
             // Tower._random   is only necessary when accessing a static memeber from outside the class
             //return Tower._random.NextDouble() < _accuracy;
-            return _random.NextDouble() < Accuracy;
+            return TreehouseDefense.Definitions.Random.NextDouble() < Accuracy;
         }
 
         public void FireOnInvaders(IInvader[] invaders)

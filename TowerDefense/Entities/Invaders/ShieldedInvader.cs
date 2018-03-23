@@ -8,7 +8,8 @@ namespace TowerDefense
 {
     class ShieldedInvader: Invader
     {
-        private static System.Random _random = new System.Random();
+        // Deleted in favor of creating static Random class
+        //private static System.Random _random = new System.Random();
 
         public override int Health { get; protected set; } = 2;
 
@@ -19,7 +20,7 @@ namespace TowerDefense
 
         public override void DecreaseHealth(int factor)
         {
-            if (_random.NextDouble() < .5)
+            if (TreehouseDefense.Definitions.Random.NextDouble() < .5)
             {
                 base.DecreaseHealth(factor);
             }

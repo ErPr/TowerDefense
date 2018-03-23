@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Definitions\Exceptions.cs" />
+    <Compile Include="Definitions\Random.cs" />
     <Compile Include="Entities\Invaders\BasicInvader.cs" />
     <Compile Include="Entities\Invaders\FastInvader.cs" />
     <Compile Include="Entities\Invaders\Invader.cs" />
