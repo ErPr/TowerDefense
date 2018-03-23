@@ -1,8 +1,8 @@
 namespace TowerDefense
 {
-    class Tower
+    abstract class Tower
     {
-        //changing these members to protected properties - keeping for reference
+        //changing these members to protected properties - keeping code for reference
         //private const int _range = 1;
         //private const int _power = 1;
         //private const double _accuracy = .75;

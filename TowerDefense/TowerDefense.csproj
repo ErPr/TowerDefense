@@ -51,6 +51,7 @@
     <Compile Include="Definitions\MapLocation.cs" />
     <Compile Include="Definitions\Path.cs" />
     <Compile Include="Definitions\Point.cs" />
+    <Compile Include="Entities\Towers\BasicTower.cs" />
     <Compile Include="Entities\Towers\PowerfulTower.cs" />
     <Compile Include="Game\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

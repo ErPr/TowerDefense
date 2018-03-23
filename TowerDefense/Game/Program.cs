@@ -26,7 +26,7 @@ namespace TowerDefense
 
                 Invader[] invaders =
                 {
-                    new Invader(path),
+                    new BasicInvader(path),
                     new FastInvader(path),
                     new ShieldedInvader(path),
                     new StrongInvader(path),
@@ -34,9 +34,9 @@ namespace TowerDefense
 
                 Tower[] towers =
                 {
-                    new Tower(new MapLocation(1, 3, map )),
+                    new BasicTower(new MapLocation(1, 3, map )),
                     new PowerfulTower(new MapLocation(3, 3, map )),
-                    new Tower(new MapLocation(5, 3, map ))
+                    new BasicTower(new MapLocation(5, 3, map ))
                 };
 
                 Level level = new Level(invaders)
