@@ -1,19 +1,21 @@
 ﻿namespace TowerDefense
 {
-    interface IInvader
+    interface IMappable
     {
         MapLocation Location { get; }
+    }
 
-        int Health { get; }
-
-        bool HasScored { get; }
-
-        bool IsNeutralized { get; }
-
-        bool IsActive { get; }
-
+    interface IMovable
+    {
         void Move();
+    }
 
+    interface IInvader : IMappable, IMovable
+    {
+        int Health { get; }
+        bool HasScored { get; }
+        bool IsNeutralized { get; }
+        bool IsActive { get; }
         void DecreaseHealth(int factor);
     }
 }
