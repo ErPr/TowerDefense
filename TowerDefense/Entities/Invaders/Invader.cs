@@ -1,6 +1,6 @@
 namespace TowerDefense
 {
-    abstract class Invader
+    abstract class Invader : IInvader
     {
         private readonly Path _path;
         private int _pathStep = 0;
