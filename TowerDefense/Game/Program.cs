@@ -24,12 +24,13 @@ namespace TowerDefense
                     }
                 );
 
-                Invader[] invaders =
+                IInvader[] invaders =
                 {
                     new BasicInvader(path),
                     new FastInvader(path),
                     new ShieldedInvader(path),
                     new StrongInvader(path),
+                    new ResurrectingInvader(path)
                 };
 
                 Tower[] towers =
