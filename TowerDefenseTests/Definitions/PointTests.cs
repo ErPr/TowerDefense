@@ -28,13 +28,44 @@ namespace TowerDefense.Tests
         [Fact()]
         public void ToStringTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            // Arrange
+            var point = new Point(5, 7);
+            var expected = "5, 7";
+
+            // Act
+            var actual = point.ToString();
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Fact()]
-        public void EqualsTest()
+        public void GiveTwoPoints_WhenEqual_ReturnTrue()
         {
-            Assert.True(false, "This test needs an implementation");
+            // Arrange
+            var point = new Point(2, 2);
+            var target = new Point(2, 2);
+            var expected = true;
+
+            // Act
+            var actual = target.Equals(point);
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        public void GiveTwoPoints_WhenNotEqual_ReturnFalse()
+        {
+            // Arrange
+            var point = new Point(3, 5);
+            var target = new Point(2, 2);
+            var expected = false;
+
+            // Act
+            var actual = target.Equals(point);
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Fact()]
