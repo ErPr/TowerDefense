@@ -26,7 +26,7 @@ namespace TowerDefense.Tests
         }
 
         [Fact()]
-        public void ToStringTest()
+        public void GivenPoint_WhenToStringCalled_ReturnStringOfPoint()
         {
             // Arrange
             var point = new Point(5, 7);
@@ -54,6 +54,7 @@ namespace TowerDefense.Tests
             Assert.Equal(expected, actual);
         }
 
+        [Fact()]
         public void GiveTwoPoints_WhenNotEqual_ReturnFalse()
         {
             // Arrange
@@ -71,7 +72,15 @@ namespace TowerDefense.Tests
         [Fact()]
         public void GetHashCodeTest()
         {
-            Assert.True(false, "This test needs an implementation");
+            // Arrange
+            var point = new Point(2, 7);
+            var expected = 69;
+
+            // Act
+            var actual = point.GetHashCode();
+
+            // Assert
+            Assert.Equal(expected, actual);
         }
 
         [Fact()]
@@ -107,7 +116,16 @@ namespace TowerDefense.Tests
         [Fact()]
         public void DistanceToTest1()
         {
-            Assert.True(false, "This test needs an implementation");
+            // Arrange
+            var point = new Point(3, 4);
+            var target = new Point(0, 0);
+
+            // Act
+            var expected = 5.0;
+            var actual = target.DistanceTo(point);
+
+            // Assert
+            Assert.Equal(expected, actual, 2);
         }
     }
 }
