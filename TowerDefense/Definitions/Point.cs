@@ -30,7 +30,7 @@ namespace TowerDefense
             return this.X == that.X && this.Y == that.Y;
         }
 
-        //is this not self-referencing?
+        // QUESTION: is this not self-referencing?
         public override int GetHashCode()
         {
             return X.GetHashCode() * 31 + Y.GetHashCode();
@@ -46,7 +46,7 @@ namespace TowerDefense
 
             return (int)Math.Sqrt(xDiffSquared + yDiffSquared);
 
-            // one-line two-point distance formula
+            // NOTE: one-line two-point distance formula
             //return (int)Math.Sqrt(Math.Pow(X-x, 2) + Math.Pow(Y-y, 2));
         }
 

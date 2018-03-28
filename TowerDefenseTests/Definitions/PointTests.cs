@@ -70,7 +70,7 @@ namespace TowerDefense.Tests
         }
 
         [Fact()]
-        public void GetHashCodeTest()
+        public void GivenPoint_WhenGetHashCodeCalled_ReturnCorrectHashCode()
         {
             // Arrange
             var point = new Point(2, 7);
@@ -84,7 +84,22 @@ namespace TowerDefense.Tests
         }
 
         [Fact()]
-        public void DistanceToTest()
+        public void GivenDistanceToCalled_WhenTwoIntParametersPassed_ReturnsCorrectDistance()
+        {
+            // Arrange
+            var point = new Point(3, 4);
+            var target = new Point(0, 0);
+
+            // Act
+            var expected = 5.0;
+            var actual = target.DistanceTo(point.X, point.Y);
+
+            // Assert
+            Assert.Equal(expected, actual, 2);
+        }
+
+        [Fact()]
+        public void GivenDistanceToCalled_WhenSinglePointParameterPassed_ReturnsCorrectDistance()
         {
             // Arrange
             var point = new Point(3, 4);
@@ -99,7 +114,7 @@ namespace TowerDefense.Tests
         }
 
         [Fact()]
-        public void DistanceToPointAtSamePosition()
+        public void GivenTwoPoints_WhenPointsInSamePosition_ReturnsTrue()
         {
             // Arrange
             var point = new Point(3, 4);
@@ -107,21 +122,6 @@ namespace TowerDefense.Tests
 
             // Act
             var expected = 0.0;
-            var actual = target.DistanceTo(point);
-
-            // Assert
-            Assert.Equal(expected, actual, 2);
-        }
-
-        [Fact()]
-        public void DistanceToTest1()
-        {
-            // Arrange
-            var point = new Point(3, 4);
-            var target = new Point(0, 0);
-
-            // Act
-            var expected = 5.0;
             var actual = target.DistanceTo(point);
 
             // Assert
