@@ -1,6 +1,6 @@
 namespace TowerDefense
 {
-    class Map
+    public class Map
     {
         public readonly int Width;
         public readonly int Height;
