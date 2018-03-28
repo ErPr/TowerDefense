@@ -89,9 +89,9 @@ namespace TowerDefense.Tests
             // Arrange
             var point = new Point(3, 4);
             var target = new Point(0, 0);
+            var expected = 5.0;
 
             // Act
-            var expected = 5.0;
             var actual = target.DistanceTo(point.X, point.Y);
 
             // Assert
@@ -104,9 +104,9 @@ namespace TowerDefense.Tests
             // Arrange
             var point = new Point(3, 4);
             var target = new Point(0, 0);
+            var expected = 5.0;
 
             // Act
-            var expected = 5.0;
             var actual = target.DistanceTo(point);
 
             // Assert
@@ -119,9 +119,9 @@ namespace TowerDefense.Tests
             // Arrange
             var point = new Point(3, 4);
             var target = new Point(3, 4);
+            var expected = 0.0;
 
             // Act
-            var expected = 0.0;
             var actual = target.DistanceTo(point);
 
             // Assert
