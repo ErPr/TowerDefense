@@ -1,6 +1,6 @@
 namespace TowerDefense
 {
-    class TowerDefenseException : System.Exception
+    public class TowerDefenseException : System.Exception
     {
         public TowerDefenseException()
         {
@@ -11,7 +11,7 @@ namespace TowerDefense
         }
     }
 
-    class OutOfBoundsException : TowerDefenseException
+    public class OutOfBoundsException : TowerDefenseException
     {
         public OutOfBoundsException()
         {

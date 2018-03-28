@@ -11,9 +11,10 @@ namespace TowerDefense.Tests
     public class MapLocationTests
     {
         [Fact()]
-        public void MapLocationTest()
+        public void ShouldThrowIfNotOnMap()
         {
-            Assert.True(false, "This test needs an implementation");
+            var map = new Map(3, 3);
+            var exception = Assert.Throws<OutOfBoundsException>(() => new MapLocation(3, 3, map));
         }
     }
 }
