@@ -20,6 +20,10 @@ namespace TowerDefense
 
         public override bool Equals(object obj)
         {
+
+            //Point that = obj as Point;
+            //return that != null && this.X == that.X && this.Y == that.Y;
+
             if(!(obj is Point))
             {
                 return false;

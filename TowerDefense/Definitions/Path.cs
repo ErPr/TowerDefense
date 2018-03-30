@@ -1,6 +1,6 @@
 namespace TowerDefense
 {
-    class Path
+    public class Path
     {
         private readonly MapLocation[] _path;
 
@@ -18,6 +18,8 @@ namespace TowerDefense
 
         public bool IsOnPath(MapLocation location)
         {
+            //return Array.IndexOf(pathLocations, mapLocation) >= 0;
+
             foreach(var pathLocation in _path)
             {
                 if(location.Equals(pathLocation))
