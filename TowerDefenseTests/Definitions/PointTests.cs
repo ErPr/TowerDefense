@@ -143,6 +143,7 @@ namespace TowerDefense.Tests
             Assert.False(target.Equals(new Point(4, 6)));
         }
 
+        // Adding tests for GetHashCode(); whenever we change Equals(), we should change GetHashCode().
         [Fact()]
         public void SimilarPointsHaveDifferentHadCodes1()
         {
