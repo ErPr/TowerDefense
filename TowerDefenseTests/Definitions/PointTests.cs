@@ -1,10 +1,4 @@
 ﻿using Xunit;
-using TowerDefense;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TowerDefense.Tests
 {
@@ -126,6 +120,48 @@ namespace TowerDefense.Tests
 
             // Assert
             Assert.Equal(expected, actual, 2);
+        }
+
+        [Fact()]
+        public void DoesNotEqualNull()
+        {
+            var target = new Point(0, 0);
+            Assert.False(target.Equals(null));
+        }
+
+        [Fact()]
+        public void DistinctObjectsAreEqual()
+        {
+            var target = new Point(4, 5);
+            Assert.True(target.Equals(new Point(4, 5)));
+        }
+
+        [Fact()]
+        public void PointAreNotEqual()
+        {
+            var target = new Point(4, 5);
+            Assert.False(target.Equals(new Point(4, 6)));
+        }
+
+        [Fact()]
+        public void SimilarPointsHaveDifferentHadCodes1()
+        {
+            var target = new Point(4, 5);
+            Assert.NotEqual(new Point(5, 4).GetHashCode(), target.GetHashCode());
+        }
+
+        [Fact()]
+        public void SimilarPointsHaveDifferentHashCodes2()
+        {
+            var target = new Point(4, 5);
+            Assert.NotEqual(new Point(4, 6).GetHashCode(), target.GetHashCode());
+        }
+
+        [Fact()]
+        public void EqualPointsHaveSameHashCodes()
+        {
+            var target = new Point(4, 5);
+            Assert.Equal(new Point(4, 5).GetHashCode(), target.GetHashCode());
         }
     }
 }

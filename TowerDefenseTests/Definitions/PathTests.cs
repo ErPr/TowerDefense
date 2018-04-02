@@ -37,8 +37,8 @@ namespace TowerDefenseTests.Definitions
         {
             var target = _path3;
 
-            Assert.False(target.IsOnPath(new MapLocation(3, 3, _map3x3)));
-            //Assert.Throws<OutOfBoundsException>(() => target.IsOnPath(new MapLocation(3, 3, _map3x3)));
+            //Assert.False(target.IsOnPath(new MapLocation(3, 3, _map3x3)));
+            Assert.Throws<OutOfBoundsException>(() => target.IsOnPath(new MapLocation(3, 3, _map3x3)));
         }
     }
 }
