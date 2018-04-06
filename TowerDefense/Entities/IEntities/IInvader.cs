@@ -1,16 +1,16 @@
 ﻿namespace TowerDefense
 {
-    interface IMappable
+    public interface IMappable
     {
         MapLocation Location { get; }
     }
 
-    interface IMovable
+    public interface IMovable
     {
         void Move();
     }
 
-    interface IInvader : IMappable, IMovable
+    public interface IInvader : IMappable, IMovable
     {
         int Health { get; }
         bool HasScored { get; }

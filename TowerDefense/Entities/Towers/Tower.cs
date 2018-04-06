@@ -1,6 +1,6 @@
 namespace TowerDefense
 {
-    abstract class Tower
+    public class Tower
     {
         //changing these members to protected properties - keeping code for reference
         //private const int _range = 1;
@@ -51,7 +51,7 @@ namespace TowerDefense
                     {
                         System.Console.WriteLine("Shot at and missed an invader");
                     }
-                    break;
+                    //break;
                 }
             }
         }

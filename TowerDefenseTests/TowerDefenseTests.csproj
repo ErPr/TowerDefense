@@ -65,6 +65,8 @@
     <Compile Include="Definitions\MapLocationTests.cs" />
     <Compile Include="Definitions\PathTests.cs" />
     <Compile Include="Definitions\PointTests.cs" />
+    <Compile Include="Entities\Towers\TowerTests.cs" />
+    <Compile Include="Mocks\InvaderMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
